@@ -1,0 +1,17 @@
+#!/bin/sh
+echo "Enter the number"
+read input
+i=2
+z=0
+while [ $i -lt $input ]
+do
+nums=`expr $input % $i`
+if [ $nums -eq $z ]
+then
+echo "Tis not prime"
+exit
+else
+i=`expr $i + 1`
+fi
+done
+echo "Tis a prime number"
